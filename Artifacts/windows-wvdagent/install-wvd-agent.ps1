@@ -6,6 +6,7 @@
 [CmdletBinding()]
 param(
     # Windows Virtual Desktop Host Pool Registration key.
+    [Parameter(Mandatory = $true)]
     [string] $HostPoolRegistrationkey
 )
 
