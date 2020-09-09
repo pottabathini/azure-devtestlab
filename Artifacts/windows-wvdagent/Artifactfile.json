@@ -20,6 +20,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./install-wvd-agent.ps1 -HostPoolRegistrationkey ''', parameters('HostPoolRegistrationkey'), '''')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./install-wvd-agent.ps1 -HostPoolRegistrationkey ''', parameters('HostPoolRegistrationkey'), '''\"')]"
     }
 }

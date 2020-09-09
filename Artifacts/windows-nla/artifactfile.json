@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+    "title": "Configure NA",
+    "publisher": "Microsoft",
+    "description": "Configures Remote Desktop Hosts Network Level Authentication Setting",
+    "tags": [
+        "Windows",
+        "RemoteDesktop",
+        "NetworkLevelAuthentication"
+    ],
+    "targetOsType": "Windows",
+    "parameters": {
+        "enabled": {
+            "type": "bool",
+            "displayName": "Network Level Authentication Enabled?",
+            "description": "Enable/Disable Network Level Authentication for a Remote Desktop Host"
+        }
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./config-nla.ps1 -enabled $', parameters('enabled'), '\"')]"
+    }
+}
