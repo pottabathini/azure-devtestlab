@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "Configure NA",
+    "title": "Configure Network Level Authentication(NLA)",
     "publisher": "Microsoft",
     "description": "Configures Remote Desktop Hosts Network Level Authentication Setting",
     "tags": [
