@@ -104,7 +104,7 @@ function Install-Agent
         [string] $ChocoExePath,
         [string] $HostPoolRegistrationkey
     )
-        $expression = "$ChocoExePath install -y -f --acceptlicense --no-progress --stoponfirstfailure wvd-agent --params=""'/REGISTRATIONTOKEN:$($HostPoolRegistrationkey)'"" --pre"
+        $expression = "$ChocoExePath install -y -f --acceptlicense --no-progress --stoponfirstfailure wvd-agent --params=""'/REGISTRATIONTOKEN:$($HostPoolRegistrationkey)'"" --pre --ignore-checksums"
         Invoke-ExpressionImpl -Expression $expression
 }
 
