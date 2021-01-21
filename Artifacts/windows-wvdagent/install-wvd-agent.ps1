@@ -169,7 +169,10 @@ try
     Enable-PSRemoting -Force -SkipNetworkProfileCheck | Out-Null
 
     Write-Host 'Ensuring latest Chocolatey version is installed.'
-    Ensure-Chocolatey -ChocoExePath "$choco"    
+    Ensure-Chocolatey -ChocoExePath "$choco"  
+    
+    Write-Host "Preparing to install Windows Virtual Desktop Bootloader."	
+    Install-Bootloader -ChocoExePath "$choco"
 
     Write-Host "Preparing to install Windows Virtual Desktop Agent."
     Install-Agent -ChocoExePath "$choco" -HostPoolRegistrationkey "$HostPoolRegistrationkey"
